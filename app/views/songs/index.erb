@@ -2,6 +2,18 @@
 
 <ul id="songs">
 <% @songs.each do |song| %>
-  <li><%= song.artist %> - <%= song.title %></li>
+  <li><%= song.artist %> - <%= song.title %>
+    <% if logged_in? %>
+    <!-- if user hasn't favorited this yet -->
+    <form method="POST" action="/songs/<%= song.id %>/favorites">
+      <input type="submit" value="&hearts;">
+    </form>
+    <!-- else show the unfavorite form-->
+    <% end %>
+  </li>
 <% end %>
 </ul>
+
+<% if logged_in? %>
+<a href="/songs/new">Create Song</a>
+<% end %>

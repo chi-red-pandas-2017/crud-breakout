@@ -1,0 +1,10 @@
+<h3>Create Song</h3>
+
+<form method="POST" action="/songs">
+  <div class="form-field">
+    <input type="text" name="song[title]" value="<%= @song.try(:title) %>" placeholder="title">
+  </div>
+  <div class="form-field">
+    <input type="text" name="song[artist]" value="<%= @song.try(:artist) %>" placeholder="artist">
+  <input type="submit">
+</form>

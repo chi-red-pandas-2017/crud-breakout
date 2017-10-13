@@ -1,3 +1,4 @@
 class Song < ApplicationRecord
-  # Remember to create a migration!
+  belongs_to :owner, class_name: :User, foreign_key: :user_id
+  validates :title, uniqueness: true
 end
