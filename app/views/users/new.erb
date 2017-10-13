@@ -1,6 +1,6 @@
 <h3>Sign Up</h3>
 
-<% unless @errors.empty? %>
+<% if @errors %>
 <%= erb :"_errors", locals: {errors: @errors} %>
 <% end %>
 

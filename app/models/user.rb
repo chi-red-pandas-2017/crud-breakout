@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   end
 
   def password=(plain_text_password)
-    @raw_password = plain_text_password
     @password = Password.create(plain_text_password)
     self.password_type_thing = @password
   end
