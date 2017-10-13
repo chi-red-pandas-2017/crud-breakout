@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+  background-color:black;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  color: white;
+}
+
+input {
+  color: black;
+}
+
+a:link {
+  color: #32CD32;
+}
+
+a:visited {
+  color: #FF0080;
+}
+
+a:hover {
+    color: #FF4500;
+}
+
+a:active {
+    color: #FF4500;
+}
+
+h1, h3 {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 5px;
+}
+
+.button {
+  background:none!important;
+  border:none;
+  padding:0!important;
+
+  /*optional*/
+  font-family:arial,sans-serif; /*input has OS specific font-family*/
+  color: #32CD32;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+#songs li {
+  list-style-type: none;
+}
+
+#songs li:before {
+  content: "\f001"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -2em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
